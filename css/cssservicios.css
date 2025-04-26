@@ -1,0 +1,772 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+}
+
+/* Estilo general de la barra de navegación */
+.barra-navegacion-principal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #1A1A1A 0%, #2C0000 100%); 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); 
+    z-index: 1000; 
+    height: 87px;
+}
+
+/* Logo a la izquierda */
+.contenedor-logo img {
+    height: 80px; 
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+/* Elemento en el centro (eslogan) */
+.centro-navegacion {
+    flex: 1; 
+    text-align: center;
+}
+
+.centro-navegacion span {
+    color: #FFFFFF;
+    font-size: 1.1em;
+    font-weight: 300;
+    letter-spacing: 1px;
+    opacity: 0.8; 
+    text-transform: uppercase;
+    margin-left: 558px;
+}
+
+/* Enlaces a la derecha */
+.enlaces-navegacion {
+    display: flex;
+    list-style: none;
+    margin-right: 40px;
+    padding: 0;
+}
+
+.enlaces-navegacion li {
+    margin-left: 10px;
+}
+
+.enlaces-navegacion a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+    position: relative; 
+}
+
+/* Efecto hover en los enlaces */
+.enlaces-navegacion a:hover {
+    color: #FF4D4D; 
+}
+
+/* Subrayado animado al hacer hover */
+.enlaces-navegacion a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #FF4D4D; 
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.enlaces-navegacion a:hover::after {
+    width: 100%;
+}
+
+.banner-seguros {
+    background: #fff;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    padding: 20px;
+    top: 90px;
+}
+
+.capa-superpuesta {
+    background: rgba(0, 0, 0, 0.6);
+    background-image: url(../imagenes/pexels-visionmonkeyandy-1034662.jpg);
+    background-size: cover;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 1200px;
+    width: 90%;
+}
+
+.capa-superpuesta h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.capa-superpuesta p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    color: white;
+}
+
+.opciones-seguros {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+.opcion-seguro {
+    background: white;
+    color: #333;
+    padding: 15px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.opcion-seguro:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.opcion-seguro span {
+    font-size: 1.5em;
+}
+
+/* Estilos para los servicios */
+.contenedor-principal {
+    text-align: center;
+    width: 100%;
+    margin-top: 150px; 
+    margin-bottom: 150px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.lista-servicios {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.tarjeta-servicio {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-servicio:hover {
+    transform: translateY(-5px);
+}
+
+.icono-servicio {
+    font-size: 2.5rem;
+    color: #e74c3c;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.boton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    cursor: pointer; 
+}
+
+.boton:hover {
+    background-color: #c0392b;
+}
+
+/* Estilos para el modal */
+.ventana-modal {
+    display: none; 
+    position: fixed;
+    top: 25%;
+    left: 38%;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenido-modal {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    text-align: center;
+    border: black 2px solid;
+}
+
+.contenido-modal h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.opciones-modal {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    text-decoration: none;
+}
+
+.opcion-modal {
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+}
+
+.opcion-modal:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.icono-modal {
+    font-size: 1.5rem;
+    color: #e74c3c;
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.boton-volver-modal {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boton-volver-modal:hover {
+    background-color: #c0392b;
+}
+
+.contenido-modal::after {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #e74c3c;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+/* Estilos para el nuevo banner de salud */
+.envoltura-banner-salud {
+    width: 100%; 
+    background-color: #FFFFFF; 
+    padding: 60px 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-salud {
+    max-width: 900px; 
+    width: 100%;
+    background-image: url(../imagenes/pexels-yankrukov-8866716.jpg);
+    background-size: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #F0F0F0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    height: 400px;
+    position: relative; 
+}
+
+.banner-salud::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: 1; 
+}
+
+.contenido-salud {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative; 
+    z-index: 2; 
+}
+
+.texto-salud {
+    flex: 1;
+    padding: 40px;
+}
+
+.texto-salud h4 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.texto-salud h3 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.texto-salud .subtexto {
+    font-size: 16px;
+    color: #FFFFFF;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.texto-salud .boton-informacion {
+    background-color: #ff5733; 
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.texto-salud .boton-informacion:hover {
+    background-color: #e64e2e; 
+}
+
+/* Estilo general del pie de página */
+.pie-pagina-principal {
+    background: linear-gradient(90deg, #1A1A1A 0%, #2C0000 100%); 
+    color: #FFFFFF;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3); 
+    position: relative;
+    overflow: hidden;
+    min-height: 150px; 
+}
+
+/* Secciones del pie de página */
+.seccion-pie {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+}
+
+.elemento-contacto, .elemento-ayuda {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.elemento-contacto:hover, .elemento-ayuda:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 5px 15px rgba(255, 77, 77, 0.4); 
+}
+
+.texto-pie {
+    color: #FFFFFF;
+    font-size: 1em;
+    margin-left: 10px;
+    opacity: 0.9;
+    transition: color 0.3s ease;
+    margin-top: 15px;
+}
+
+.elemento-contacto:hover .texto-pie, .elemento-ayuda:hover .texto-pie {
+    color: #FF6B6B; 
+}
+
+.enlace-pie {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.enlace-pie img {
+    margin-right: 10px;
+    height: 50px;
+}
+
+
+.seccion-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.enlace-social {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.enlace-social img {
+    height: 80px; 
+    transition: transform 0.3s ease;
+}
+
+.enlace-social:hover img {
+    transform: scale(1.2); 
+    filter: brightness(1) invert(0) sepia(1) hue-rotate(330deg) saturate(5); 
+}
+
+/* Efecto decorativo (líneas animadas) */
+.pie-pagina-principal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, transparent, #FF4D4D, transparent);
+    animation: deslizar 3s infinite linear;
+}
+
+@keyframes deslizar {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Sección de Apoyo DANA */
+.seccion-apoyo-dana {
+    display: flex;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 40px;
+    min-height: 400px; 
+    align-items: stretch; 
+}
+
+.texto-apoyo-dana {
+    flex: 1;
+    padding: 40px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.texto-apoyo-dana h1 {
+    font-size: 26px; 
+    font-weight: 700; 
+    color: #333;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.texto-apoyo-dana p {
+    font-size: 16px;
+    color: #666; 
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.texto-apoyo-dana .boton-llamada-accion {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background-color 0.3s;
+    text-decoration: none; 
+    display: inline-block; 
+}
+
+.texto-apoyo-dana .boton-llamada-accion:hover {
+    background-color: #e60000;
+}
+
+.imagen-apoyo-dana {
+    flex: 1;
+    display: flex; 
+    align-items: stretch; 
+}
+
+.imagen-apoyo-dana img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+    box-shadow: 0 0 15px 10px rgba(250, 250, 250, 0.8); 
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .tarjeta-servicio {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .banner-seguros {
+        height: 300px;
+        top: 70px;
+    }
+
+    .contenedor-principal {
+        margin-top: 370px;
+    }
+
+    nav {
+        padding: 10px 0;
+    }
+
+    ul {
+        gap: 10px;
+    }
+
+    a {
+        font-size: 1em;
+        padding: 0 10px;
+    }
+
+    /* Ajustes para la barra de navegación */
+    .barra-navegacion-principal {
+        flex-direction: column;
+        padding: 10px;
+        height: auto; 
+    }
+
+    .contenedor-logo img {
+        height: 50px; 
+        margin-top: 20px; 
+        margin-left: 160px; 
+    }
+
+    .centro-navegacion {
+        display: none; 
+    }
+
+    .enlaces-navegacion {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-right: 0; 
+    }
+
+    .enlaces-navegacion li {
+        margin: 10px 0;
+    }
+
+    /* Ajustes responsivos para el banner-salud */
+    .banner-salud {
+        flex-direction: column;
+        height: auto; 
+    }
+
+    .texto-salud {
+        padding: 20px;
+    }
+
+    .texto-salud h3 {
+        font-size: 20px;
+    }
+
+    .texto-salud .subtexto {
+        font-size: 14px;
+    }
+
+    .envoltura-banner-salud {
+        padding: 40px 0; 
+    }
+
+    /* Ajustes responsivos para la sección de Apoyo DANA */
+    .seccion-apoyo-dana {
+        flex-direction: column;
+        min-height: auto; 
+    }
+
+    .imagen-apoyo-dana {
+        height: 300px; 
+    }
+
+    .texto-apoyo-dana {
+        padding: 20px;
+    }
+
+    .texto-apoyo-dana h1 {
+        font-size: 20px;
+    }
+
+    .texto-apoyo-dana p {
+        font-size: 14px;
+    }
+
+    /* Ajustes responsivos para el pie de página */
+    .pie-pagina-principal {
+        flex-direction: column;
+        padding: 20px 10px;
+        text-align: center;
+    }
+
+    .seccion-pie {
+        margin-bottom: 20px;
+    }
+
+    .seccion-social {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .elemento-contacto, .elemento-ayuda {
+        flex-direction: column;
+        margin: 5px 0;
+    }
+
+    .texto-pie {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+}
+
+#contenedor-contacto {
+    margin-top: 15px;
+    margin-left: 40px;
+    font-size: 30px;
+    position: absolute;
+    color: #FFFFFF;
+}
+
+.texto-footer {
+    margin-top: 17px;
+    font-weight: bold;
+    color: white;
+}
+
+.iconos-footer {
+    line-height: 140px;
+    text-decoration: none;
+}
+
+.div-contacto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px; 
+    margin-top: 15px;
+}
+
+.div-contacto img {
+    margin-right: 8px; 
+}
+
+#logo-cabecera {
+    position: absolute;      
+    left: 0px;                 
+    top: -20px;                 
+}
+
+.icono-ayuda {
+    line-height: 10px;
+    text-decoration: none;
+}
+
+.div-ayuda {
+    display: flex;
+    padding-right: 10px;
+    margin-bottom: 10px; 
+    margin-top: 15px;
+    display: inline-block;
+    padding-left: 60px;
+    padding-right: 60px;
+}

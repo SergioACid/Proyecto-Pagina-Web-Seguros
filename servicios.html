@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguro</title>
+    <link href="fontawesome-free-6.6.0-web/css/all.css" rel="stylesheet">
+    <link href="css/cssservicios.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="barra-navegacion-principal">
+        <div class="contenedor-logo">
+            <a href="principal.html">
+                <img id="logo-cabecera" src="logoBlanco (2).png" alt="Logo NEXOPLUS">
+            </a>
+        </div>
+        <div class="centro-navegacion">
+            <span>Tu tranquilidad, nuestra prioridad</span>
+        </div>
+        <ul class="enlaces-navegacion">
+            <li><a href="principal.html">Inicio</a></li>
+            <li><a href="info.html">Información</a></li>
+            <li><a href="servicios.html">Seguros</a></li>
+            <li><a href="form.html">Iniciar Sesión</a></li>
+        </ul>
+    </nav>
+    
+    <div class="banner-seguros">
+        <div class="capa-superpuesta">
+            <h1>Seguros disponibles</h1>
+            <p>Disfruta de nuestros seguros</p>
+            <div class="opciones-seguros">
+                <div class="opcion-seguro"> <span>🚗</span> Coche</div>
+                <div class="opcion-seguro"> <span>🏍️</span> Moto</div>
+                <div class="opcion-seguro"> <span>🏡</span> Hogar</div>
+                <div class="opcion-seguro"> <span>🏠</span> Ocupación ilegal</div>
+                <div class="opcion-seguro"> <span>🚚</span> Vehículos Profesionales</div>
+                <div class="opcion-seguro"> <span>❤️</span> Salud</div>
+                <div class="opcion-seguro"> <span>🛴</span> Movilidad</div>
+                <div class="opcion-seguro"> <span>🐾</span> Mascotas</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contenedor-principal">
+        <h1>Descubre todos nuestros seguros</h1>
+        <div class="lista-servicios">
+            <div class="tarjeta-servicio">
+                <div class="icono-servicio">🏠</div>
+                <h2>Seguro ante la Ocupación ilegal, Hogar y Mascotas</h2>
+                <p>Protege tu casa y tus perros y gatos.</p>
+                <button class="boton" onclick="abrirModal('modalHogar')">Más información</button>
+            </div>
+            <div class="tarjeta-servicio">
+                <div class="icono-servicio">🚗</div>
+                <h2>Seguros de Coche y otros vehículos</h2>
+                <p>Tu coche, tu moto y tu movilidad con las mejores coberturas.</p>
+                <button class="boton" onclick="abrirModal('modalCoche')">Más información</button>
+            </div>
+            <div class="tarjeta-servicio">
+                <div class="icono-servicio">❤️</div>
+                <h2>Seguros de Salud y Dental</h2>
+                <p>Elige el Seguro de Salud que mejor se adapta a ti.</p>
+                <button class="boton" onclick="abrirModal('modalSalud')">Más información</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal  -->
+    <div id="modalHogar" class="ventana-modal">
+        <div class="contenido-modal">
+            <span class="cerrar-modal" onclick="cerrarModal('modalHogar')">×</span>
+            <h2>Seguro ante la Ocupación ilegal, Hogar y Mascotas</h2>
+            <div class="opciones-modal">
+                <a class="opcion-modal" href="proximamente.html"><span class="icono-modal"><i class="fas fa-home"></i></span> Hogar</a>
+                <a class="opcion-modal" href="proximamente.html"><span class="icono-modal"><i class="fas fa-lock"></i></span> Ocupación ilegal</a>
+                <a class="opcion-modal" href="proximamente.html"><span class="icono-modal"><i class="fas fa-paw"></i></span> Mascotas</a>
+            </div>
+            <button class="boton-volver-modal" onclick="cerrarModal('modalHogar')">Volver</button>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modalCoche" class="ventana-modal">
+        <div class="contenido-modal">
+            <span class="cerrar-modal" onclick="cerrarModal('modalCoche')">×</span>
+            <h2>Seguros de Coche y otros vehículos</h2>
+            <div class="opciones-modal">
+                <a class="opcion-modal" href="proximamente.html"><span class="icono-modal"><i class="fas fa-car"></i></span> Coche</a>
+                <a class="opcion-modal" href="proximamente.html"><span class="icono-modal"><i class="fas fa-motorcycle"></i></span> Moto</a>
+                <a class="opcion-modal" href="proximamente.html"><span class="icono-modal"><i class="fas fa-skating"></i></span> Movilidad para patinetes</a>
+                <a class="opcion-modal" href="proximamente.html"><span class="icono-modal"><i class="fas fa-bicycle"></i></span> Movilidad para bicicletas</a>
+                <a class="opcion-modal" href="proximamente.html"><span class="icono-modal"><i class="fas fa-motorcycle"></i></span> Moto eléctrica</a>
+                <a class="opcion-modal" href="proximamente.html"><span class="icono-modal"><i class="fas fa-car"></i></span> Coche Eléctrico o Híbrido</a>
+                <a class="opcion-modal" href="proximamente.html"><span class="icono-modal"><i class="fas fa-truck"></i></span> Vehículos Profesionales</a>
+            </div>
+            <button class="boton-volver-modal" onclick="cerrarModal('modalCoche')">Volver</button>
+        </div>
+    </div>
+
+    <!-- Modal  -->
+    <div id="modalSalud" class="ventana-modal">
+        <div class="contenido-modal">
+            <span class="cerrar-modal" onclick="cerrarModal('modalSalud')">×</span>
+            <h2>Seguros de Salud y Dental</h2>
+            <div class="opciones-modal">
+                <a class="opcion-modal" href="proximamente.html"><span class="icono-modal"><i class="fas fa-heartbeat"></i></span> Salud</a>
+                <a class="opcion-modal" href="proximamente.html"><span class="icono-modal"><i class="fas fa-tooth"></i></span> Dental</a>
+            </div>
+            <button class="boton-volver-modal" onclick="cerrarModal('modalSalud')">Volver</button>
+        </div>
+    </div>
+
+    <script>
+        // Función para abrir el modal
+        function abrirModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        // Función para cerrar el modal
+        function cerrarModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        // Cerrar el modal si se hace clic fuera de él
+        window.onclick = function(event) {
+            const modalHogar = document.getElementById('modalHogar');
+            const modalCoche = document.getElementById('modalCoche');
+            const modalSalud = document.getElementById('modalSalud');
+            if (event.target == modalHogar) {
+                modalHogar.style.display = "none";
+            }
+            if (event.target == modalCoche) {
+                modalCoche.style.display = "none";
+            }
+            if (event.target == modalSalud) {
+                modalSalud.style.display = "none";
+            }
+        }
+    </script>
+
+    <!-- Primer banner -->
+    <div class="seccion-apoyo-dana">
+        <div class="texto-apoyo-dana">
+            <h1>Apoya a Valencia frente a la DANA</h1>
+            <p>Estamos con los afectados por la DANA en Valencia. Si eres cliente, te ofrecemos asistencia inmediata, recursos y apoyo para superar esta situación. ¡Contáctanos y juntos lo haremos más fácil!</p>
+            <a href="https://ajudadana.es/" class="boton-llamada-accion">Quiero saber más</a>
+        </div>
+        <div class="imagen-apoyo-dana">
+            <img src="imagenes/dana.jpeg" alt="Teléfono con la app ConductTOP">
+        </div>
+    </div>
+
+    <br><br><br>
+
+    <!-- Nuevo banner  -->
+    <div class="envoltura-banner-salud">
+        <div class="banner-salud">
+            <div class="contenido-salud">
+                <div class="texto-salud">
+                    <h4>Tu tranquilidad, nuestra prioridad:</h4>
+                    <h3>El Seguro de Salud para que tu salud no espere</h3>
+                    <p class="subtexto">En NEXOPLUS también aseguramos tu salud, para que puedas disfrutar de todo.</p>
+                    <a href="proximamente.html" class="boton-informacion">Más información</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de Página -->
+    <footer class="pie-pagina-principal">
+        <div class="seccion-pie contacto-seccion">
+            <div class="elemento-contacto">
+                <img src="imagenes/mail.gif" alt="correo" height="30px">
+                <p class="texto-pie">asdasds@afsafasfafs</p>
+            </div>
+            <div class="elemento-contacto">
+                <img src="imagenes/Call miss.gif" alt="telefono" height="40px">
+                <p class="texto-pie">7070707077070</p>
+            </div>
+        </div>
+        <div class="seccion-pie seccion-ayuda">
+            <div class="elemento-ayuda">
+                <a href="proximamente.html" class="enlace-pie">
+                    <img src="imagenes/Maintenance.gif" alt="ayuda">
+                    <p class="texto-pie">¿Necesitas ayuda?</p>
+                </a>
+            </div>
+            <div class="elemento-ayuda">
+                <a href="form.html" class="enlace-pie">
+                    <img src="imagenes/Individual.gif" alt="contacto">
+                    <p class="texto-pie">Contacta con nosotros</p>
+                </a>
+            </div>
+        </div>
+        <div class="seccion-pie seccion-social">
+            <a href="https://www.youtube.com/?app=desktop&hl=es" class="enlace-social">
+                <img src="imagenes/Youtube.gif" alt="youtube">
+            </a>
+            <a href="https://www.facebook.com/?locale=es_ES" class="enlace-social">
+                <img src="imagenes/Facebook.gif" alt="facebook">
+            </a>
+            <a href="https://x.com/home?lang=es" class="enlace-social">
+                <img src="imagenes/X (Twitter) (1).gif" alt="twitter">
+            </a>
+            <a href="https://www.instagram.com/" class="enlace-social">
+                <img src="imagenes/Instagram.gif" alt="instagram">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

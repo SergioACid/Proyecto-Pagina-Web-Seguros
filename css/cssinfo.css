@@ -1,0 +1,698 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #FAFAFA;
+}
+
+/* Estilo general de la barra de navegación */
+.barra-navegacion-principal {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #1A1A1A 0%, #2C0000 100%); 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); 
+    z-index: 1000; 
+}
+
+/* Logo a la izquierda */
+.contenedor-logo img {
+    height: 80px; 
+}
+
+/* Elemento en el centro (eslogan) */
+.centro-navegacion {
+    flex: 1; 
+    text-align: center;
+}
+
+.centro-navegacion span {
+    color: #FFFFFF;
+    font-size: 1.1em;
+    font-weight: 300;
+    letter-spacing: 1px;
+    opacity: 0.8; 
+    text-transform: uppercase;
+    margin-left: 270px;
+}
+
+/* Enlaces a la derecha */
+.enlaces-navegacion {
+    display: flex;
+    list-style: none;
+    margin-right: 40px;
+    padding: 0;
+}
+
+.enlaces-navegacion li {
+    margin-left: 10px; 
+}
+
+.enlaces-navegacion a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+    position: relative; 
+}
+
+/* Efecto hover en los enlaces */
+.enlaces-navegacion a:hover {
+    color: #FF4D4D; 
+}
+
+/* Subrayado animado al hacer hover */
+.enlaces-navegacion a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #FF4D4D; 
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.enlaces-navegacion a:hover::after {
+    width: 100%; 
+}
+
+/* Contenedor principal */
+.contenedor-principal {
+    max-width: 900px;
+    margin: 50px auto;
+    background-color: #FAFAFA;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.seguro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+.seguro img {
+    width: 400px;
+    box-shadow: 0 0 15px 10px rgba(250, 250, 250, 0.8);
+}
+
+.texto-seguro {
+    max-width: 50%;
+}
+
+.texto-seguro h2 {
+    font-size: 22px;
+}
+
+.texto-seguro strong {
+    color: #FF4D4D;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.texto-seguro a {
+    color: #FF4D4D;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Sección "Soluciones" (Rediseñada) */
+.paneles-soluciones {
+    text-align: center;
+    padding: 60px 20px;
+    background: url('../imagenes/texture-background.jpg') repeat; 
+    background-size: cover;
+    margin-top: 90px; 
+    position: relative;
+    overflow: hidden;
+}
+
+.panel-solucion {
+    display: inline-block;
+    width: 28%;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 0 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    vertical-align: top;
+}
+
+.panel-solucion:hover {
+    transform: translateY(-5px);
+}
+
+.panel-solucion i {
+    font-size: 2.5em;
+    color: #e74c3c;
+    margin-bottom: 15px;
+}
+
+.panel-solucion h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.panel-solucion p {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.boton-panel {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.boton-panel:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+/* Nueva sección "Descubre todos nuestros seguros" */
+.opciones-seguros {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.opciones-seguros h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.tarjetas-seguros {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.tarjeta-seguro {
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #F0F0F0;
+    padding: 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-seguro:hover {
+    transform: translateY(-5px);
+}
+
+.icono-tarjeta {
+    width: 50px;
+    height: 50px;
+    background-color: #FFE6E6;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.icono-tarjeta i {
+    color: #FF4D4D;
+    font-size: 24px;
+}
+
+.tarjeta-seguro h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.tarjeta-seguro p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.tarjeta-seguro .enlace-informacion {
+    font-size: 16px;
+    color: #FF4D4D;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.tarjeta-seguro .enlace-informacion:hover {
+    text-decoration: underline;
+}
+
+/* Sección de estrellas */
+.contenedor-estrellas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.estrellas {
+    font-size: 24px;
+    color: #ccc;
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.estrellas::before {
+    content: '★★★★★';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    color: gold;
+    animation: llenarEstrellas 4s infinite;
+}
+
+@keyframes llenarEstrellas {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+.puntuacion {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Sección "Soluciones" (con clases renombradas) */
+.seccion-soluciones {
+    text-align: center;
+    padding: 40px 20px;
+    margin-bottom: 40px;
+    margin-top: 90px; 
+    background-image: url(../imagenes/foto1.jpg);
+    background-size: cover; 
+    background-position: center;
+}
+
+.seccion-soluciones h1 {
+    color: #FFFFFF; 
+    font-size: 3em; 
+    font-weight: 800; 
+    margin-bottom: 20px;
+    letter-spacing: 2px; 
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); 
+    display: inline-block; 
+    animation: aparecer 1.5s ease-in-out; 
+}
+
+/* Animación para que el título aparezca de forma suave */
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.seccion-soluciones p {
+    color: #FFFFFF;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    animation: aparecer 1.5s ease-in-out; 
+}
+
+.seccion-soluciones .boton-inicio-sesion-soluciones {
+    background: linear-gradient(90deg, #FF4D4D, #FF6B6B); 
+    color: #FFFFFF;
+    padding: 15px 35px; 
+    font-size: 1.1em; 
+    font-weight: 600; 
+    border: none;
+    border-radius: 10px; 
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(255, 77, 77, 0.4); 
+    transition: all 0.3s ease; 
+    text-transform: uppercase; 
+    animation: aparecer 1.5s ease-in-out; 
+}
+
+.seccion-soluciones .boton-inicio-sesion-soluciones:hover {
+    background: linear-gradient(90deg, #FF6B6B, #FF4D4D); 
+    box-shadow: 0 6px 20px rgba(255, 77, 77, 0.6); 
+    transform: translateY(-2px); 
+    color: #FFFFFF; 
+}
+
+/* Estilo general del pie de página */
+.pie-pagina-principal {
+    background: linear-gradient(90deg, #1A1A1A 0%, #2C0000 100%);
+    color: #FFFFFF;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3); 
+    position: relative;
+    overflow: hidden;
+    min-height: 150px; 
+}
+
+/* Secciones del pie de página */
+.seccion-pie {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+}
+
+.elemento-contacto, .elemento-ayuda {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.elemento-contacto:hover, .elemento-ayuda:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 5px 15px rgba(255, 77, 77, 0.4); 
+}
+
+.texto-pie {
+    color: #FFFFFF;
+    font-size: 1em;
+    margin-left: 10px;
+    opacity: 0.9;
+    transition: color 0.3s ease;
+}
+
+.elemento-contacto:hover .texto-pie, .elemento-ayuda:hover .texto-pie {
+    color: #FF6B6B; 
+}
+
+.enlace-pie {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.enlace-pie img {
+    margin-right: 10px;
+    height: 50px;
+}
+
+/* Sección de redes sociales */
+.seccion-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.enlace-social {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.enlace-social img {
+    height: 80px; 
+    transition: transform 0.3s ease;
+}
+
+.enlace-social:hover img {
+    transform: scale(1.2); 
+    filter: brightness(1) invert(0) sepia(1) hue-rotate(330deg) saturate(5); 
+}
+
+/* Efecto decorativo (líneas animadas) */
+.pie-pagina-principal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, transparent, #FF4D4D, transparent);
+    animation: deslizar 3s infinite linear;
+}
+
+@keyframes deslizar {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    .tarjetas-seguros {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .tarjeta-seguro {
+        padding: 20px;
+    }
+
+    .tarjeta-seguro h3 {
+        font-size: 18px;
+    }
+
+    .tarjeta-seguro p {
+        font-size: 14px;
+    }
+
+    .tarjeta-seguro .enlace-informacion {
+        font-size: 14px;
+    }
+
+    .opciones-seguros {
+        padding: 30px 15px;
+    }
+
+    .contenido-navegacion {
+        flex-wrap: wrap;
+        padding: 10px 20px;
+        justify-content: space-between;
+    }
+
+    ul {
+        width: auto;
+        justify-content: flex-end;
+    }
+
+    li {
+        height: 40px;
+        line-height: 40px;
+    }
+
+    #reloj {
+        margin: 0;
+        width: 150px;
+        font-size: 20px;
+        order: -1; 
+    }
+
+    #logo-cabecera {
+        height: 40px;
+    }
+
+    .paneles-soluciones {
+        padding: 40px 10px;
+    }
+
+    .panel-solucion {
+        width: 90%;
+        margin: 10px 0;
+        display: block;
+    }
+
+    /* Ajustes para la barra de navegación */
+    .barra-navegacion-principal {
+        flex-direction: column;
+        padding: 10px;
+        height: auto; 
+    }
+
+    .contenedor-logo img {
+        height: 50px; 
+        margin-top: 10px; 
+    }
+
+    .centro-navegacion {
+        display: none; 
+    }
+
+    .enlaces-navegacion {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-right: 0; 
+    }
+
+    .enlaces-navegacion li {
+        margin: 10px 0; 
+    }
+}
+
+@media (max-width: 600px) {
+    .contenido-navegacion {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #reloj {
+        margin: 5px 0;
+    }
+
+    ul {
+        justify-content: center;
+    }
+
+    .paneles-soluciones {
+        margin-top: 70px;
+    }
+}
+
+/* Estilo general del pie de página */
+.pie-pagina-principal {
+    background: linear-gradient(90deg, #1A1A1A 0%, #2C0000 100%); 
+    color: #FFFFFF;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3); 
+    position: relative;
+    overflow: hidden;
+    min-height: 150px; 
+}
+
+/* Secciones del pie de página */
+.seccion-pie {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+}
+
+.elemento-contacto, .elemento-ayuda {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.elemento-contacto:hover, .elemento-ayuda:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 5px 15px rgba(255, 77, 77, 0.4); 
+}
+
+.texto-pie {
+    color: #FFFFFF;
+    font-size: 1em;
+    margin-left: 10px;
+    opacity: 0.9;
+    transition: color 0.3s ease;
+}
+
+.elemento-contacto:hover .texto-pie, .elemento-ayuda:hover .texto-pie {
+    color: #FF6B6B; 
+}
+
+.enlace-pie {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.enlace-pie img {
+    margin-right: 10px;
+    height: 50px;
+}
+
+/* Sección de redes sociales */
+.seccion-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.enlace-social {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.enlace-social img {
+    height: 80px; 
+    transition: transform 0.3s ease;
+}
+
+.enlace-social:hover img {
+    transform: scale(1.2); 
+    filter: brightness(1) invert(0) sepia(1) hue-rotate(330deg) saturate(5); 
+}
+
+/* Efecto decorativo (líneas animadas) */
+.pie-pagina-principal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, transparent, #FF4D4D, transparent);
+    animation: deslizar 3s infinite linear;
+}
+
+@keyframes deslizar {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}

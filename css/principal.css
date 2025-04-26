@@ -1,0 +1,474 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+}
+
+/* Estilo general de la barra de navegación */
+.barra-navegacion-principal {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #1A1A1A 0%, #2C0000 100%); 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); 
+    z-index: 1000; 
+}
+
+
+.contenedor-logo img {
+    height: 80px; 
+}
+
+
+.centro-navegacion {
+    flex: 1; 
+    text-align: center;
+}
+
+.centro-navegacion span {
+    color: #FFFFFF;
+    font-size: 1.1em;
+    font-weight: 300;
+    letter-spacing: 1px;
+    opacity: 0.8; 
+    text-transform: uppercase;
+    margin-left: 270px;
+}
+
+/* Enlaces a la derecha */
+.enlaces-navegacion {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.enlaces-navegacion li {
+    margin-left: 10px; 
+}
+
+.enlaces-navegacion a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+    position: relative; 
+}
+
+/* Efecto hover en los enlaces */
+.enlaces-navegacion a:hover {
+    color: #FF4D4D; 
+}
+
+/* Subrayado animado al hacer hover */
+.enlaces-navegacion a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #FF4D4D; 
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.enlaces-navegacion a:hover::after {
+    width: 100%; 
+}
+
+/* Sección Hero */
+.seccion-hero {
+    background: linear-gradient(180deg, #1A1A1A 0%, #3F0000 50%, #f5f5f5 100%);
+    height: 400px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding: 20px;
+    top: 90px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.seccion-hero h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.seccion-hero p {
+    font-size: 1.2em;
+    color: #fff;
+    margin-bottom: 20px;
+    max-width: 800px;
+}
+
+.boton {
+    background: linear-gradient(90deg, #FF4D4D, #FF6B6B); 
+    color: #FFFFFF;
+    padding: 15px 35px; 
+    font-size: 1.1em; 
+    font-weight: 600; 
+    border: none;
+    border-radius: 10px; 
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(255, 77, 77, 0.4); 
+    transition: all 0.3s ease; 
+    text-transform: uppercase; 
+    animation: aparecer 1.5s ease-in-out;
+}
+
+.boton:hover {
+    background: linear-gradient(90deg, #FF6B6B, #FF4D4D); 
+    box-shadow: 0 6px 20px rgba(255, 77, 77, 0.6); 
+    transform: translateY(-2px); 
+    color: #FFFFFF; 
+}
+
+/* Sección de Introducción */
+.contenedor-introduccion {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f5f5f5;
+    margin-top: 70px;
+}
+
+.contenido-introduccion {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contenido-introduccion p {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.estadisticas-introduccion {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.estadistica {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    text-align: center;
+}
+
+.estadistica h2 {
+    font-size: 2rem;
+    color: #e74c3c;
+    margin-bottom: 10px;
+}
+
+.estadistica p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Sección de Testimonios (Carrusel) */
+.contenedor-testimonios {
+    text-align: center;
+    padding: 60px 20px;
+    background: #fff;
+}
+
+.deslizador-testimonios {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 20px 0;
+    scroll-behavior: smooth;
+}
+
+.deslizador-testimonios::-webkit-scrollbar {
+    height: 8px;
+}
+
+.deslizador-testimonios::-webkit-scrollbar-thumb {
+    background-color: #e74c3c;
+    border-radius: 10px;
+}
+
+.deslizador-testimonios::-webkit-scrollbar-track {
+    background-color: #f5f5f5;
+}
+
+.deslizamiento-testimonio {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    margin: 0 10px;
+}
+
+.deslizamiento-testimonio i {
+    font-size: 1.5rem;
+    color: #e74c3c;
+    margin-bottom: 10px;
+}
+
+.deslizamiento-testimonio p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.deslizamiento-testimonio h3 {
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.valoracion {
+    color: #e74c3c;
+}
+
+.valoracion i {
+    font-size: 1rem;
+    margin: 0 2px;
+}
+
+/* Sección de Contacto Rápido */
+.contenedor-contacto-rapido {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f0f2f5; 
+}
+
+.contenido-contacto-rapido {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenido-contacto-rapido h1 {
+    font-size: 2.5em;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.contenido-contacto-rapido p {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 20px;
+    max-width: 600px;
+}
+
+.contenido-contacto-rapido .boton {
+    margin-bottom: 20px; 
+}
+
+.informacion-contacto {
+    text-align: center;
+    margin-right: 20px;
+}
+
+.informacion-contacto p {
+    font-size: 1rem;
+    color: #333;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.informacion-contacto img {
+    margin-right: 10px; 
+    vertical-align: middle;
+}
+
+/* Estilo general del pie de página */
+.pie-pagina-principal {
+    background: linear-gradient(90deg, #1A1A1A 0%, #2C0000 100%); 
+    color: #FFFFFF;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3); 
+    position: relative;
+    overflow: hidden;
+    min-height: 150px; 
+}
+
+/* Secciones del pie de página */
+.seccion-pie {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+}
+
+.elemento-contacto, .elemento-ayuda {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.elemento-contacto:hover, .elemento-ayuda:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 5px 15px rgba(255, 77, 77, 0.4); 
+}
+
+.texto-pie {
+    color: #FFFFFF;
+    font-size: 1em;
+    margin-left: 10px;
+    opacity: 0.9;
+    transition: color 0.3s ease;
+}
+
+.elemento-contacto:hover .texto-pie, .elemento-ayuda:hover .texto-pie {
+    color: #FF6B6B; 
+}
+
+.enlace-pie {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.enlace-pie img {
+    margin-right: 10px;
+    height: 50px;
+}
+
+/* Sección de redes sociales */
+.seccion-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.enlace-social {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.enlace-social img {
+    height: 80px; 
+    transition: transform 0.3s ease;
+}
+
+.enlace-social:hover img {
+    transform: scale(1.2); 
+    filter: brightness(1) invert(0) sepia(1) hue-rotate(330deg) saturate(5); 
+}
+
+/* Efecto decorativo (líneas animadas) */
+.pie-pagina-principal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, transparent, #FF4D4D, transparent);
+    animation: deslizar 3s infinite linear;
+}
+
+@keyframes deslizar {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    .pie-pagina-principal {
+        flex-direction: column;
+        padding: 20px 10px;
+        text-align: center;
+    }
+
+    .seccion-pie {
+        margin-bottom: 20px;
+    }
+
+    .seccion-social {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .elemento-contacto, .elemento-ayuda {
+        flex-direction: column;
+        margin: 5px 0;
+    }
+
+    .texto-pie {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+
+    /* Ajustes para la barra de navegación */
+    .barra-navegacion-principal {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .contenedor-logo img {
+        height: 50px; 
+    }
+
+    .centro-navegacion {
+        display: none; 
+    }
+
+    .enlaces-navegacion {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .enlaces-navegacion li {
+        margin: 10px 0; 
+    }
+}
+
+/* Animación de entrada */
+@keyframes aparecer {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
